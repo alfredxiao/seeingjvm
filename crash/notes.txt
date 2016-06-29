@@ -1,0 +1,5 @@
+Crash1 doesn't crash the JVM, it returns nicely, echo $? shows 100
+
+java -Xbootclasspath/p:. Crash2
+
+crash2 crashes

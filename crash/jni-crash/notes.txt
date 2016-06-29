@@ -1,0 +1,5 @@
+To debug using gdb, either
+
+1. use java -XX:OnError="gdb - %p" MyApplication
+or
+2. use java -XX:+ShowMessageBoxOnError

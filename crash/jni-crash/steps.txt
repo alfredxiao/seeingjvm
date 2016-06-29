@@ -1,0 +1,14 @@
+1. Write your Killer.java, and compile it to get Killer.java
+2. javah -jni Killer
+   - to generate Killer.h
+3. Write your Killer.c
+   - be careful to copy the function declaration from .h file and name the arguments
+4. Compile Killer.c
+   gcc -I/home/alfred/bin/jdk1.8.0_66/include -I/home/alfred/bin/jdk1.8.0_66/include/linux -c Killer.c -o Killer.o
+   - this generates Killer.o
+5. Generate shared lib
+   - gcc -shared -o libKiller.so Killer.o
+
+Notes:
+- you might need to export LD_LIBRARY_PATH, or set java.library.path system property
+- so file is name libSOMETHING.so, when you load it, it is System.loadLibrary("SOMETHING"); 
